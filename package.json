@@ -1,8 +1,8 @@
 {
-  "name": "vuex-plugin-clear",
-  "version": "0.0.5",
+  "name": "vuex-plugins-clear",
+  "version": "0.0.6",
   "description": "vuex-plugin-clear",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "npm run test"
   },
