@@ -5,8 +5,7 @@ import {
   STORE_VALUE_NOT_BE_CHANGE,
   CLEAR_MODULE
 } from './libs/utils'
-
-modules.export =  function moduleClearPlugin (modules) {
+module.exports = function moduleClearPlugin (modules) {
   return store => {
     registerModule(store, CLEAR_MODULE, clearData) // 注册清空模块
     Object.keys(modules).forEach(moduleName => {
@@ -23,9 +22,10 @@ modules.export =  function moduleClearPlugin (modules) {
       if (type === 'initDataAll') {
         if (Array.isArray(payload)) {
           payload.forEach(moduleName => {
+            console.log(moduleName, initStore[moduleName], 'value')
             if (initStore && initStore[moduleName]) {
               unregisterModule(store, moduleName)
-              registerModule(store, moduleName, modules[moduleName])
+              registerModule(store, moduleName, initStore[moduleName])
             }
           })
         } else {
@@ -38,8 +38,8 @@ modules.export =  function moduleClearPlugin (modules) {
             if (initStore && !initStore[moduleName]) {
               // 不含有这个模块取消注册
               unregisterModule(store, moduleName)
-              registerModule(store, moduleName, modules[moduleName])
-            } 
+              registerModule(store, moduleName, initStore[moduleName])
+            }
           })
         }
       }

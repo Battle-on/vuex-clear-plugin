@@ -2,7 +2,7 @@
 
 var _clearData = _interopRequireDefault(require("./libs/clear-data.js"));
 
-var _utils = require("./libs/utils.js");
+var _utils = require("./libs/utils");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23,9 +23,11 @@ module.exports = function moduleClearPlugin(modules) {
       if (type === 'initDataAll') {
         if (Array.isArray(payload)) {
           payload.forEach(function (moduleName) {
+            console.log(moduleName, initStore[moduleName], 'value');
+
             if (initStore && initStore[moduleName]) {
               (0, _utils.unregisterModule)(store, moduleName);
-              (0, _utils.registerModule)(store, moduleName, modules[moduleName]);
+              (0, _utils.registerModule)(store, moduleName, initStore[moduleName]);
             }
           });
         } else {
@@ -39,7 +41,7 @@ module.exports = function moduleClearPlugin(modules) {
             if (initStore && !initStore[moduleName]) {
               // 不含有这个模块取消注册
               (0, _utils.unregisterModule)(store, moduleName);
-              (0, _utils.registerModule)(store, moduleName, modules[moduleName]);
+              (0, _utils.registerModule)(store, moduleName, initStore[moduleName]);
             }
           });
         }
