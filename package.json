@@ -1,6 +1,6 @@
 {
   "name": "vuex-plugin-clear",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "vuex-plugin-clear",
   "main": "index.js",
   "scripts": {

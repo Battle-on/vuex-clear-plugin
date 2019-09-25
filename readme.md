@@ -22,7 +22,7 @@ npm install vuex-plugin-clear
 ```javascript
 const modules = {
   color,
-  count,
+  count
 };
 import initData from "vuex-plugin-clear";
 const moduleControl = initData(modules);
