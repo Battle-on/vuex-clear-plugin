@@ -1,0 +1,18 @@
+{
+  "name": "vuex-clear-plugin",
+  "version": "0.0.1",
+  "description": "vuex-clear-plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangdadada/vuex-clear-plugin.git"
+  },
+  "keywords": [
+    "ISC"
+  ],
+  "author": "wangjunfa@100tal.com",
+  "license": "ISC"
+}
