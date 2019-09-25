@@ -1,7 +1,7 @@
 {
   "name": "vuex-clear-plugin",
   "version": "0.0.1",
-  "description": "vuex-clear-plugin",
+  "description": "vuex-plugin-clear",
   "main": "index.js",
   "scripts": {
     "test": "npm run test"
