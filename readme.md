@@ -20,6 +20,10 @@ npm install vuex-plugin-clear
 ### Example
 
 ```javascript
+const modules = {
+  color,
+  count,
+};
 import initData from "vuex-plugin-clear";
 const moduleControl = initData(modules);
 export default new Vuex.Store({
@@ -41,8 +45,8 @@ vm.$store.commit("initDataAll");
 ### 清除指定 vuex module 数据
 
 ```javascript
-const modules = ['count', 'color]
-vm.$store.commit("initDataAll", modules)
+const modules = ["count", "color"];
+vm.$store.commit("initDataAll", modules);
 ```
 
 ```javascript
@@ -52,13 +56,10 @@ vm.$store.commit("initDataAll", modules)
 ### 清除指定 vuex 模块不清除
 
 ```javascript
-
-const modules = ['count', 'color]
-vm.$store.commit("initDtaAllExpect", modules)
+const modules = ["count", "color"];
+vm.$store.commit("initDtaAllExpect", modules);
 ```
 
 ```javascript
 这样就能清除 除 count 和 color module的数据
 ```
-
-
