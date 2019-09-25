@@ -6,7 +6,7 @@ import {
   CLEAR_MODULE
 } from './libs/utils'
 
-export default function moduleClearPlugin (modules) {
+modules.export =  function moduleClearPlugin (modules) {
   return store => {
     registerModule(store, CLEAR_MODULE, clearData) // 注册清空模块
     Object.keys(modules).forEach(moduleName => {
