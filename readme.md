@@ -43,21 +43,21 @@ vm.$store.commit("initDataAll");
 ```javascript
 const modules = ['count', 'color]
 vm.$store.commit("initDataAll", modules)
+```
 
-```
+```javascript
 这样就能清除 count 和 color module的数据
-```
 ```
 
 ### 清除指定 vuex 模块不清除
 
-````javascript
+```javascript
 
 const modules = ['count', 'color]
 vm.$store.commit("initDtaAllExpect", modules)
-```javascript
-
 ```
+
+```javascript
 这样就能清除 除 count 和 color module的数据
 ```
 
