@@ -1,22 +1,22 @@
-# vuex-clear-plugin
+# vuex-plugin-clear
 
-> vuex-clear-plugin 是一个使用vuex技术栈，可以自动清除vuex module层数据的插件
+> vuex-plugin-clear 是一个使用vuex技术栈，可以自动清除vuex module层数据的插件
 
 ## Features
 自动清除vuex module层数据，
 平时写业务代码的时候，
-有可能会出现忘记清除module层数据情况，使用vuex-clear-plugin可以有效避免这种情况的发生
+有可能会出现忘记清除module层数据情况，使用vuex-plugin-clear可以有效避免这种情况的发生
 
 ## Getting started
 ### Installation
 ```
 
-npm install vuex-clear-plugin
+npm install vuex-plugin-clear
 ```
 
 ### Example
 ```javascript
-import initData from 'vuex-clear-plugin'
+import initData from 'vuex-plugin-clear'
 const moduleControl = initData(modules)
 export default new Vuex.Store({
   state: {},
